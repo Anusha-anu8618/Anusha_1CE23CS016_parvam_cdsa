@@ -1,0 +1,360 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char str[100];
+    printf("enter the string:");
+    scanf("%s",str);
+    for(int i=0;i<(strlen(str));i++)
+    printf("ASCII value of %c:%d\n",str[i],str[i]);
+    return 0;
+}
+
+//floating point
+#include <stdio.h>
+int main() {
+    float n;
+    int i;
+    printf("enter floating point:");
+    scanf("%f",&n);
+    printf("you entered:%f",n);
+    i=n;
+    printf("integer value is:%d",i);
+    return 0;
+}
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("enter the hexadecimal input:");
+    scanf("%x",&n);
+    printf("decimal:%5d\n",&n);
+    printf("octal:%5o\n",n);
+    printf("uppercase hexadecimal:%5X\n",n);
+
+    return 0;
+}
+
+//valid or invalid
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("enter a number:");
+    scanf("%d",&n);
+    if(n>1&&n<1000)
+    {
+    if(10<=n<=20 && n%2==0)
+    {
+        printf("valid");
+    }
+    else
+    {
+        printf("invalid");
+    }
+    }
+
+    return 0;
+}
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+int main(){
+    int n;
+    int x=0;
+    int first=0,second=1;
+    printf("enter the number of elements:");
+    scanf("%d",&n);
+    printf("fibonacci series is:");
+    if(n==1)
+    {
+        printf("%d\n",0);
+    }
+    if(n>1)
+    {
+        printf("%d\n%d\n",0,1);
+    }
+    for(int i=0;i<n-2;i++)
+    {
+      x=first+second;
+      printf("%d\n",x);
+      first=second;
+      second=x;
+    }
+
+    return 0;
+}
+
+// Online C compiler to run C program online//sum of n numbers
+#include <stdio.h>
+
+int main() {
+    int n;
+    int sum=0;
+    printf("enter the number of elements:");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        printf("%d\n",i);
+        sum=sum+i; 
+    }
+    printf("sum=%d",sum);
+    return 0;
+}
+
+// Online C compiler to run C program online//sum of square
+#include <stdio.h>
+
+int main() {
+    int n;
+    int sum=0;
+    printf("enter the number of elements:");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        printf("%d,square=%d\n",i,i*i);
+        sum+=i*i; 
+    }
+    printf("sum of square elements=%d",sum);
+
+    return 0;
+}
+
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+int main(){
+   int n,reversed=0,remainder;
+   printf("enter a number:");
+   scanf("%d",&n);
+   while(n!=0)
+   {
+       remainder=n%10;
+       reversed=reversed*10+remainder;
+       n/=10;
+   }
+   printf("reversed number:%d\n",reversed);
+   return 0;
+}
+
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char str[20];
+    printf("enter a string:");
+    scanf("%s",str);
+    for(int i=0;i<strlen(str)-1;i++)
+    {
+        if(str[i]!=str[strlen(str)-i-1])
+        {
+          printf("string is not a palindrome");
+          break;
+        }
+        else
+        {
+          printf("string is a palindrome");
+          break;
+        }
+    }
+    return 0;
+}
+
+// decimal to binary
+#include<stdio.h>
+int main()
+{
+    int num;
+    printf("enter a number:");
+    scanf("%d",&num);
+    while(num>0)
+    {
+        printf("%d",num%2);
+        num=num/2;
+    }
+    return 0;
+}
+
+///decimal to binary
+#include<stdio.h>
+int main()
+{
+    int num;
+    int binary[50];
+    printf("enter a number:");
+    scanf("%d",&num);
+    int i=0;
+    while(num>0)
+    {
+        binary[i]=num%2;
+        num=num/2;
+        i++;
+    }
+    for(int j=i-1;j>=0;j--)
+    {
+        printf("%d",binary[j]);
+    }
+    return 0;
+}
+
+
+#include<stdio.h>
+int main(){
+    int a,b;
+    a=1;
+    b=(++a)+(a++);
+    printf("\na=%d\tb=%d\n",a,b);
+    printf("\n%d\t%d",a,a++);
+    return 0;
+}
+
+#include<stdio.h>
+int main(){
+   int m,n,k;
+   m=sizeof(2);
+   n=sizeof(2);
+   k=sizeof(2);
+   printf("%d %d %d",m,n,k);
+   return 0;
+}
+
+
+#include<stdio.h>
+int main(){
+   double x=8/4;
+   printf("%f",(float)x);
+   return 0;
+}
+
+
+
+//displaying date
+#include<stdio.h>
+int main(){
+   int n;
+   printf("enter a number(1-7):");
+   scanf("%d",&n);
+   switch(n)
+   {
+       case 1:
+           printf("monday");
+           break;
+       case 2:
+           printf("tuesday");
+           break;
+       case 3:
+           printf("wednesday");
+           break;
+       case 4:
+           printf("thursday");
+           break;
+       case 5:
+           printf("friday");
+           break;
+       case 6:
+           printf("saturday");
+           break;
+       case 7:
+           printf("sunday");
+           break;
+       default:
+           printf("invalid");
+           break;
+   }
+   return 0;
+}
+
+
+
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char str[20],str2[30];
+    printf("enter a string:");
+    scanf("%s",str);
+    for(int i=0;i<strlen(str)-1;i++)
+    {
+        if(str[i]==str[i+1])
+        {
+             str[i]=' ';
+        }
+    }
+    printf("after removing redundant values of string:%s\n",str);
+    return 0;
+}
+
+
+// Online C compiler to run C program online pointer example
+#include <stdio.h>
+
+int main() {
+   int x,y,*pointer;
+   x=22;
+   printf("%d\n%d\n",x,y);
+   pointer=&x;
+   printf("%d\n%d\n",x,y);
+   y=*pointer;
+   printf("%d\n%d\n:",x,y);
+   return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    int x,y,*pointer1,*pointer2;
+    x=18;
+    pointer1=&x;
+    pointer2=pointer1;
+    printf("%d\t%d\t%d\n",pointer1,pointer2,x);
+
+    return 0;
+}
+
+
+// struct std data
+#include <stdio.h>
+#include<stdlib.h>
+struct studentdata{
+    char name[50];
+    char usn[15];
+    int marks[5];
+    int total;
+    float average;
+    };
+int main()
+{
+    struct studentdata stdsvar;
+    stdsvar.total=0;
+    printf("enter the student name:");
+    scanf("%s",stdsvar.name);
+    printf("enter the usn:");
+    scanf("%s",stdsvar.usn);
+    printf("enter the marks for 5 subjects:\n");
+    for(int i=0;i<5;i++){
+        printf("enter marks of subject%d:",i+1);
+        scanf("%d",&stdsvar.marks[i]);
+        stdsvar.total+=stdsvar.marks[i];
+    }
+    stdsvar.average=stdsvar.total/5;
+    printf("\n student name:%s",stdsvar.name);
+    printf("\n student usn;%s",stdsvar.usn);
+    printf("\n total marks:%.2d\n",stdsvar.total);
+    printf("\n average marks:%.2f\n",stdsvar.average);
+    if(stdsvar.average<35)
+    {
+        printf("%s has been failed",stdsvar.name);
+    }
+    else
+    {
+        printf("%s has been passed",stdsvar.name);
+    }
+    return 0;
+}
